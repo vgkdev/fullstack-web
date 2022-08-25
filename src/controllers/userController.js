@@ -59,9 +59,16 @@ let handleDeleteUser = async (req, res) => {
   return res.status(200).json(message);
 };
 
+let handleEditUser = async (req, res) => {
+  let data = req.body; //tất cả các name trong input
+  let message = await userService.updateUserData(data); //Users sau khi update
+  return res.status(200).json(message);
+};
+
 module.exports = {
   handleLogin: handleLogin,
   handleGetAllUsers: handleGetAllUsers,
   handleCreateNewUser: handleCreateNewUser,
   handleDeleteUser: handleDeleteUser,
+  handleEditUser: handleEditUser,
 };
