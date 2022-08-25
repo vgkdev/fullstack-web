@@ -18,6 +18,7 @@ let initWebRoutes = (app) => {
   router.post("/api/login", userController.handleLogin);
   router.get("/api/get-all-users", userController.handleGetAllUsers);
   router.post("/api/create-new-user", userController.handleCreateNewUser);
+  router.delete("/api/delete-user", userController.handleDeleteUser);
 
   // router.get("/vgk", (req, res) => {
   //   return res.send("hello world vgk");
